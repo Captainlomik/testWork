@@ -1,0 +1,343 @@
+@import "./vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+p,
+a,
+li {
+  color: $lightText;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+body {
+  max-width: 1920px;
+  background: $background;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+//HEADER
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 46px;
+  position: relative;
+}
+
+.header {
+  &__navigation {
+    display: flex;
+  }
+  &__nav {
+    margin-left: 50px;
+    & ul {
+      display: flex;
+      align-items: start;
+
+      & li {
+        margin-right: 30px;
+      }
+      & li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+
+    & small {
+      font-size: 10px;
+      font-family: "Montserrat", sans-serif;
+      color: $lightText;
+      text-transform: lowercase;
+      font-weight: 100;
+      padding-top: 10px;
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    &-phone {
+      margin-right: 45px;
+    }
+    &-links a {
+      padding-right: 30px;
+    }
+    &-links a:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.telegram::before {
+  content: url(/dist/assets/telegram.png);
+  width: 20px;
+  height: 20px;
+}
+
+.viber::before {
+  content: url(/dist/assets/viber.png);
+  width: 20px;
+  height: 20px;
+}
+
+.whatsapp::before {
+  content: url(/dist/assets/whatsapp.png);
+  width: 20px;
+  height: 20px;
+}
+
+header::before {
+  content: "";
+  background-color: $circleHeader;
+  opacity: 0.5;
+  display: block;
+  width: 260px;
+  height: 260px;
+  z-index: -1;
+  filter: blur(196px);
+  position: absolute;
+  left: 802px;
+  top: -154px;
+  z-index: -1;
+}
+
+.header-wrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-image: url(/dist/assets/purpleball.png);
+  background-size: cover;
+  left: 700px;
+  top: 2px;
+  z-index: -3;
+}
+
+.header-wrap::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 83px;
+  height: 83px;
+  background-size: cover;
+  background-image: url(/dist/assets/red_ball.png);
+  background-size: cover;
+  left: 340px;
+  top: 65px;
+  z-index: -3;
+}
+
+//Main
+.mainScreen {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &-wrap {
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &L {
+    width: 25%;
+    h1 {
+      font-weight: 400;
+      font-size: 48px;
+    }
+    span {
+      font-weight: 900;
+    }
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      margin-top: 30px;
+    }
+  }
+
+  &R {
+    position: relative;
+    width: 30%;
+    & > h3 {
+      text-align: end;
+      font-size: 18px;
+
+      & .grad {
+        text-transform: uppercase;
+      }
+    }
+    &__pref {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 140px 140px;
+      grid-template-rows: 1fr 1fr;
+      gap: 30px 30px;
+      justify-content: end;
+
+      h3 {
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        text-align: right;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        text-align: end;
+        margin-top: 6px;
+      }
+      &-btn {
+        text-align: end;
+      }
+    }
+
+    .btn {
+      @include button;
+      margin-top: 60px;
+    }
+    .btn:hover {
+      box-shadow: 1px 1px 10px rgba(168, 252, 255, 0.3);
+    }
+  }
+
+  .grad {
+    background: $gradientText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.mainScreen::before {
+  content: "";
+  background-color: $circleTxt;
+  opacity: 0.5;
+  display: block;
+  width: 311px;
+  height: 311px;
+  z-index: -1;
+  filter: blur(196px);
+  position: absolute;
+  left: -120px;
+  top: 400px;
+}
+.mainScreenR::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  background-image: url(/dist/assets/red_ball.png);
+  background-size: cover;
+  left: -80px;
+  top: 310px;
+  filter: blur(2.5px);
+}
+
+//FOOTER
+.mainFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &-head {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: $darkText;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+
+  & ul li {
+    margin-bottom: 10px;
+  }
+  & ul li:last-child {
+    margin-bottom: 0;
+  }
+  & ul li a {
+    font-weight: 400;
+  }
+
+  .flex {
+    display: flex;
+  }
+  &__menu {
+    &-1 {
+      margin-right: 50px;
+    }
+  }
+
+  &__contacts {
+    .right {
+      text-align: right;
+    }
+
+    .number {
+      display: block;
+      text-align: right;
+    }
+
+    &-contacts {
+      margin: 20px 0;
+      & a {
+        margin-right: 10px;
+      }
+      & a:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.smallFooter {
+  text-align: right;
+  margin-top: 30px;
+  a,
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: right;
+  }
+  a {
+    text-decoration: underline;
+    margin-top: 5px;
+  }
+}
