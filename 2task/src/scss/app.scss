@@ -5,6 +5,7 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+
 }
 
 ul,
@@ -35,7 +36,8 @@ button {
 
 body {
   background: $background;
-  margin: 0 auto;
+  margin: 0 auto;  
+  overflow-x: hidden;
 }
 
 .container {
@@ -131,7 +133,6 @@ header::before {
   display: block;
   width: 260px;
   height: 260px;
-  z-index: -1;
   filter: blur(196px);
   position: absolute;
   left: 550px;
@@ -145,23 +146,25 @@ header::before {
   position: absolute;
   width: 60px;
   height: 60px;
-  background-image: url(/dist/assets/purpleball.png);
+  background-image: url('/dist/assets/purpleball.png');
   background-size: cover;
   left: 690px;
   top: 5px;
   z-index: -3;
 }
 
-.header::after {
+header::after {
   content: "";
   display: block;
   position: absolute;
   width: 83px;
   height: 83px;
-  background-image: url(/dist/assets/red_ball.png);
-  background-size: cover;
-  left: 370px;
-  top: 65px;
+  background-image: url('/dist/assets/red_ball.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  left: 530px;
+  top: 68px;
   z-index: -3;
 }
 
@@ -312,6 +315,10 @@ header::before {
   left: -1px;
   top: 340px;
   filter: blur(2.5px);
+}
+
+.main__second::before{
+  display: none
 }
 
 //FOOTER
