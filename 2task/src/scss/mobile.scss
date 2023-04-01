@@ -1,6 +1,7 @@
 @import "./vars.scss";
 
 @media (max-width: 768px) {
+
   h1,
   h2,
   h3,
@@ -20,6 +21,7 @@
   header.container {
     padding: 0;
   }
+
   .header {
     display: initial;
     width: 100%;
@@ -32,8 +34,10 @@
 
     &__nav {
       padding: 0;
+
       &-list {
         width: 100%;
+
         &-item {
           padding-right: 15px;
 
@@ -44,10 +48,12 @@
             text-transform: uppercase;
           }
         }
+
         &-item:last-child {
           padding-right: 0;
           display: none;
         }
+
         &-item:nth-last-child(-n + 2) {
           padding-right: 0;
         }
@@ -57,9 +63,11 @@
     &__logo {
       display: none;
     }
+
     &__social {
       display: none;
     }
+
     &__txt {
       display: none;
     }
@@ -69,19 +77,18 @@
   main.container {
     padding: 0;
   }
+
   .section-main {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 95px;
     padding-bottom: 60px;
-    background: radial-gradient(
-      238.53% 189.02% at 3.2% 3.49%,
-      rgba(255, 246, 233, 0.1) 0%,
-      rgba(26, 29, 35, 0.1) 26.62%,
-      rgba(26, 29, 35, 0.1) 52.1%,
-      rgba(26, 29, 35, 0.01) 70.17%,
-      rgba(26, 29, 35, 0) 100%
-    );
+    background: radial-gradient(238.53% 189.02% at 3.2% 3.49%,
+        rgba(255, 246, 233, 0.1) 0%,
+        rgba(26, 29, 35, 0.1) 26.62%,
+        rgba(26, 29, 35, 0.1) 52.1%,
+        rgba(26, 29, 35, 0.01) 70.17%,
+        rgba(26, 29, 35, 0) 100%);
     backdrop-filter: blur(7.5px);
   }
 
@@ -124,6 +131,7 @@
         display: flex;
         flex-wrap: wrap;
       }
+
       &__item {
         min-width: 40%;
         text-transform: uppercase;
@@ -212,70 +220,44 @@
     order: -1;
   }
 
-  header{
-    overflow:hidden;
-  }
-
-  main{
-    overflow: hidden;
-  }
   //Украшения
-  // .header::before,
-  // header::after {
-  //   display: none;
-  // }
-
-  // header::before {
-  //   // left: 260px;
-  //   // top: 107px;
-  //   display: none;
-  // }
-  // .main__second::after {
-  //   display: none;
-  // }
-  // .main::before {
-  //   // height: 210px;
-  //   // width: 210px;
-  //   // left: -55px;
-  //   // top: 250px;
-  //   display: none;
-  // }
-
-  // header::after {
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   width: 43px;
-  //   height: 43px;
-  //   background-image: url(/dist/assets/red_ball.png);
-  //   background-size: cover;
-  //   left: 25px;
-  //   top: 465px;
-  //   z-index: -1;
-  // }
-
-  // .section-main::before {
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   width: 40px;
-  //   height: 40px;
-  //   background-image: url(/dist/assets/purpleball.png);
-  //   background-size: 100%;
-  //   background-repeat: no-repeat;
-  //   background-position: center center;
-  //   left: 280px;
-  //   top: 280px;
-  //   z-index: -3;
-  // }
-
-  .purple-shadow{
-    left:158px;
-    top:107px;
+  main {
+    overflow: hidden;
+    position: relative;
   }
 
-  .red-shadow{
+  .purple-shadow {
+    left: 258px;
+    top: 107px;
+  }
+
+  .red-shadow {
+    width: 210px;
+    height: 210px;
     left: -55px;
     top: 240px;
   }
+
+  .purple-ball {
+    height: 40px;
+    width: 40px;
+    top: 280px;
+    left: 290px;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+  }
+
+  .red-ball{
+    width: 43px;
+    height: 43px;
+    top:465px;
+    left:25px;
+    border-radius: 50%;
+    backdrop-filter: blur(1px);
+  }
+
+  .big-red-ball{
+    display: none;
+  }
+
 }
