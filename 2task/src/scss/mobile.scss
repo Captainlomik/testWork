@@ -1,0 +1,203 @@
+@import "./vars.scss";
+
+@media (max-width: 720px) {
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  li,
+  button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  //HEADER
+  header.container{
+    padding: 0;
+  }
+  .header {
+    display: initial;
+    width: 100%;
+    padding: 20px 15px;
+    position: fixed;
+    z-index: 1000;
+    background-color: $background;
+    top: 0px;
+    left: 0px;
+
+    &__nav {
+      padding: 0;
+      &-list {
+        width: 100%;
+        &-item {
+          padding-right: 15px;
+
+          & a{
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+
+        }
+        &-item:last-child {
+          padding-right: 0;
+          display: none;
+        }
+        &-item:nth-last-child(-n+2){
+            padding-right: 0;
+        }
+      }
+    }
+
+    &__logo {
+      display: none;
+    }
+    &__social {
+      display: none;
+    }
+    &__txt {
+      display: none;
+    }
+  }
+  .header::before,
+  .header::after,
+  header::before {
+    display: none;
+  }
+
+  //MAIN
+main.container{
+    padding: 0;
+}
+  .section-main{
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 95px;
+    padding-bottom: 60px;
+    background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%);
+    backdrop-filter: blur(7.5px); 
+  }
+
+  .main {
+    flex-wrap: wrap;
+
+    &__first {
+      &-header {
+        font-size: 36px;
+        line-height: 43px;
+        padding-bottom: 15px;
+        width: fit-content;
+      }
+    }
+
+    &__second {
+      text-align: initial;
+      display: initial;
+
+      &-header {
+        padding-bottom: 5px;
+        padding-top: 45px;
+
+        &-grad {
+          text-transform: none;
+        }
+      }
+
+      &-btn {
+        display: none;
+      }
+    }
+
+    .mob {
+      display: block;
+    }
+
+    &-info {
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &__item {
+        min-width: 40%;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        line-height: 16px;
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      &__item::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 1px;
+        background: $gradientText;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .pref {
+    display: none;
+  }
+
+  //FOTER
+  .footer {
+    &-top {
+      padding-top: 45px;
+      flex-wrap: wrap;
+
+      &-head {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      &__list {
+        &-item {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+
+      &__center {
+        padding: 30px 0;
+
+        &-menu {
+          min-width: 50%;
+          padding-right: 40px;
+        }
+      }
+
+      &__end {
+        text-align: left;
+        margin-left: 0;
+
+        &-contacts {
+          margin: 10px 0;
+        }
+      }
+    }
+
+    &-bottom {
+      text-align: left;
+      padding-top: 50px;
+      padding-bottom: 60px;
+
+      &-txt {
+        line-height: 14px;
+      }
+    }
+  }
+}

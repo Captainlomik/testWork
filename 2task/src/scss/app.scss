@@ -134,8 +134,8 @@ header::before {
   z-index: -1;
   filter: blur(196px);
   position: absolute;
-  left: 802px;
-  top: -154px;
+  left: 550px;
+  top: -174px;
   z-index: -1;
 }
 
@@ -145,11 +145,10 @@ header::before {
   position: absolute;
   width: 60px;
   height: 60px;
-  background-size: cover;
   background-image: url(/dist/assets/purpleball.png);
   background-size: cover;
-  left: 700px;
-  top: 2px;
+  left: 690px;
+  top: 5px;
   z-index: -3;
 }
 
@@ -159,10 +158,9 @@ header::before {
   position: absolute;
   width: 83px;
   height: 83px;
-  background-size: cover;
   background-image: url(/dist/assets/red_ball.png);
   background-size: cover;
-  left: 340px;
+  left: 370px;
   top: 65px;
   z-index: -3;
 }
@@ -224,6 +222,10 @@ header::before {
         text-transform: uppercase;
         letter-spacing: 0.05em;
         font-weight: 700;
+        background: $gradientTextSmall;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     }
 
@@ -242,6 +244,7 @@ header::before {
     -webkit-text-fill-color: transparent;
   }
 }
+
 
 .pref {
   display: flex;
@@ -280,6 +283,10 @@ header::before {
   }
 }
 
+.mob {
+  display: none;
+}
+
 .main::before {
   content: "";
   background-color: $circleTxt;
@@ -291,7 +298,7 @@ header::before {
   filter: blur(196px);
   position: absolute;
   left: -120px;
-  top: 400px;
+  top: 270px;
 }
 .main__second::after {
   content: "";
@@ -363,6 +370,9 @@ header::before {
     }
     &-contact:last-child {
       margin-right: 0px;
+    }
+    &-adress {
+      font-weight: 400;
     }
   }
 }

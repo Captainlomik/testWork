@@ -7,7 +7,8 @@ $circleHeader: #833AB4;
 
 $lightText: #E4E5EA;
 $darkText: #656566;
-$gradientText: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+$gradientText: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+$gradientTextSmall: linear-gradient(90deg, #FCB045  36.99%, #FD1D1D 100%);
 
 @mixin button{
     background-color: $accent;
