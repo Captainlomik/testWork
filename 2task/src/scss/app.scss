@@ -185,15 +185,25 @@ body {
       max-width: 290px;
       padding-bottom: 40px;
 
-      &-grad {
+      &-grad-text {
         text-transform: uppercase;
         letter-spacing: 0.05em;
         font-weight: 700;
-        background: $gradientTextSmall;
+      }
+
+      .color-grad1{
+        background: $gradientTextSmall1; 
+         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .color-grad2{
+        background: $gradientTextSmall2;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
+
     }
 
     &-btn {
@@ -351,6 +361,7 @@ body {
   width: 260px;
   height: 260px;
   filter: blur(196px);
+  -webkit-filter:blur(150px);
   left: 550px;
   top: -174px;
   z-index: -1;
@@ -365,6 +376,7 @@ body {
   height: 311px;
   z-index: -1;
   filter: blur(196px);
+  -webkit-filter:blur(150px);
   left: -120px;
   top: 270px;
 }
@@ -384,8 +396,8 @@ body {
 .big-red-ball {
   display: block;
   position: absolute;
-  width: 83px;
-  height: 83px;
+  width: 90px;
+  height: 90px;
   background-image: url("/dist/assets/red_ball.png");
   background-size: 100%;
   background-repeat: no-repeat;
