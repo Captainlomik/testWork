@@ -37,6 +37,7 @@
 
       &-list {
         width: 100%;
+        justify-content: space-around;
 
         &-item {
           padding-right: 15px;
@@ -112,7 +113,7 @@
         padding-bottom: 5px;
         padding-top: 45px;
 
-        &-grad-text  {
+        &-grad-text {
           text-transform: none;
         }
       }
@@ -247,17 +248,33 @@
     backdrop-filter: blur(2px);
   }
 
-  .red-ball{
+  .red-ball {
     width: 43px;
     height: 43px;
-    top:465px;
-    left:25px;
+    top: 465px;
+    left: 25px;
     border-radius: 50%;
     backdrop-filter: blur(1px);
   }
 
-  .big-red-ball{
+  .big-red-ball {
     display: none;
+  }
+
+}
+
+@media(min-width:540px) and (max-width:768px) {
+  .footer-top {
+    &__start{
+      width: 35%;
+    }
+    &__center {
+      width: 65%;
+      padding: 0 40px;
+    }
+  }
+  .footer-bottom{
+    text-align: center;
   }
 
 }

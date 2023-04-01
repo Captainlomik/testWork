@@ -1,0 +1,41 @@
+@media(min-width:769px) and (max-width:1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        &__logo {
+            display: none;
+        }
+
+        &__txt {
+            display: none;
+        }
+
+        &__nav {
+            padding: 0px;
+        }
+        &__social{
+            margin: 20px 0;
+            margin-left: 20px;
+        }
+    }
+
+    .purple-ball{
+        display: none;
+    }
+
+    .red-ball{
+        display: none;
+    }
+
+    .pref-wp{
+        max-width: 40%;
+    }
+
+    .footer-top__center{
+        padding: 0 60px;
+    }
+}
