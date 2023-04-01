@@ -203,15 +203,15 @@
     }
   }
 
-  .menu2{
+  //Позиция меню
+  .menu2 {
     display: flex;
     flex-direction: column;
   }
 
-  .menu2 .footer-top__list-item:nth-child(2){
+  .menu2 .footer-top__list-item:nth-child(2) {
     order: -1;
-      }
-
+  }
 
   //Украшения
   .header::before,
@@ -222,16 +222,17 @@
   header::before {
     // left: 260px;
     // top: 107px;
-    display: none
+    display: none;
   }
   .main__second::after {
     display: none;
   }
   .main::before {
-    height: 210px;
-    width: 210px;
-    left: -55px;
-    top: 250px;
+    // height: 210px;
+    // width: 210px;
+    // left: -55px;
+    // top: 250px;
+    display: none;
   }
 
   header::after {
