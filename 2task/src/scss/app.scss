@@ -5,7 +5,6 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-
 }
 
 ul,
@@ -36,8 +35,7 @@ button {
 
 body {
   background: $background;
-  margin: 0 auto;  
-  overflow-x: hidden;
+  margin: 0 auto;
 }
 
 .container {
@@ -126,47 +124,74 @@ body {
   height: 20px;
 }
 
-header::before {
-  content: "";
+//Украшение
+.purple-shadow {
+  position: absolute;
   background-color: $circleHeader;
   opacity: 0.5;
   display: block;
   width: 260px;
   height: 260px;
   filter: blur(196px);
-  position: absolute;
+
   left: 550px;
   top: -174px;
   z-index: -1;
 }
-
-.header::before {
-  content: "";
-  display: block;
+.red-shadow {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url('/dist/assets/purpleball.png');
-  background-size: cover;
-  left: 690px;
-  top: 5px;
-  z-index: -3;
-}
-
-header::after {
-  content: "";
+  background-color: $circleTxt;
+  opacity: 0.5;
   display: block;
-  position: absolute;
-  width: 83px;
-  height: 83px;
-  background-image: url('/dist/assets/red_ball.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  left: 530px;
-  top: 68px;
-  z-index: -3;
+  width: 311px;
+  height: 311px;
+  z-index: -1;
+  filter: blur(196px);
+
+  left: -120px;
+  top: 270px;
 }
+// header::before {
+//   content: "";
+//   background-color: $circleHeader;
+//   opacity: 0.5;
+//   display: block;
+//   width: 260px;
+//   height: 260px;
+//   filter: blur(196px);
+//   position: absolute;
+//   left: 550px;
+//   top: -174px;
+//   z-index: -1;
+// }
+
+// .header::before {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: 60px;
+//   height: 60px;
+//   background-image: url("/dist/assets/purpleball.png");
+//   background-size: cover;
+//   left: 690px;
+//   top: 5px;
+//   z-index: -3;
+// }
+
+// header::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: 83px;
+//   height: 83px;
+//   background-image: url("/dist/assets/red_ball.png");
+//   background-size: 100%;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   left: 530px;
+//   top: 68px;
+//   z-index: -3;
+// }
 
 //Main
 .section-main {
@@ -248,7 +273,6 @@ header::after {
   }
 }
 
-
 .pref {
   display: flex;
   justify-content: end;
@@ -290,36 +314,36 @@ header::after {
   display: none;
 }
 
-.main::before {
-  content: "";
-  background-color: $circleTxt;
-  opacity: 0.5;
-  display: block;
-  width: 311px;
-  height: 311px;
-  z-index: -1;
-  filter: blur(196px);
-  position: absolute;
-  left: -120px;
-  top: 270px;
-}
-.main__second::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  background-size: cover;
-  background-image: url(/dist/assets/red_ball.png);
-  background-size: cover;
-  left: -1px;
-  top: 340px;
-  filter: blur(2.5px);
-}
+// .main::before {
+//   content: "";
+//   background-color: $circleTxt;
+//   opacity: 0.5;
+//   display: block;
+//   width: 311px;
+//   height: 311px;
+//   z-index: -1;
+//   filter: blur(196px);
+//   position: absolute;
+//   left: -120px;
+//   top: 270px;
+// }
+// .main__second::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: 28px;
+//   height: 28px;
+//   background-size: cover;
+//   background-image: url(/dist/assets/red_ball.png);
+//   background-size: cover;
+//   left: -1px;
+//   top: 340px;
+//   filter: blur(2.5px);
+// }
 
-.main__second::before{
-  display: none
-}
+// .main__second::before {
+//   display: none;
+// }
 
 //FOOTER
 .footer-top {

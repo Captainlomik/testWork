@@ -70,7 +70,6 @@
     padding: 0;
   }
   .section-main {
-    position: relative;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 95px;
@@ -213,53 +212,70 @@
     order: -1;
   }
 
+  header{
+    overflow:hidden;
+  }
+
+  main{
+    overflow: hidden;
+  }
   //Украшения
-  .header::before,
-  header::after {
-    display: none;
+  // .header::before,
+  // header::after {
+  //   display: none;
+  // }
+
+  // header::before {
+  //   // left: 260px;
+  //   // top: 107px;
+  //   display: none;
+  // }
+  // .main__second::after {
+  //   display: none;
+  // }
+  // .main::before {
+  //   // height: 210px;
+  //   // width: 210px;
+  //   // left: -55px;
+  //   // top: 250px;
+  //   display: none;
+  // }
+
+  // header::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   width: 43px;
+  //   height: 43px;
+  //   background-image: url(/dist/assets/red_ball.png);
+  //   background-size: cover;
+  //   left: 25px;
+  //   top: 465px;
+  //   z-index: -1;
+  // }
+
+  // .section-main::before {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   width: 40px;
+  //   height: 40px;
+  //   background-image: url(/dist/assets/purpleball.png);
+  //   background-size: 100%;
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  //   left: 280px;
+  //   top: 280px;
+  //   z-index: -3;
+  // }
+
+  .purple-shadow{
+    left:158px;
+    top:107px;
   }
 
-  header::before {
-    // left: 260px;
-    // top: 107px;
-    display: none;
-  }
-  .main__second::after {
-    display: none;
-  }
-  .main::before {
-    // height: 210px;
-    // width: 210px;
-    // left: -55px;
-    // top: 250px;
-    display: none;
-  }
-
-  header::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 43px;
-    height: 43px;
-    background-image: url(/dist/assets/red_ball.png);
-    background-size: cover;
-    left: 25px;
-    top: 465px;
-    z-index: -1;
-  }
-
-  .section-main::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url(/dist/assets/purpleball.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    left: 280px;
-    top: 280px;
-    z-index: -3;
+  .red-shadow{
+    left: -55px;
+    top: 240px;
   }
 }
