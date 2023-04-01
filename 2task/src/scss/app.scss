@@ -24,94 +24,102 @@ h2,
 h3,
 p,
 a,
-li {
+li,
+button {
   color: $lightText;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
+  line-height: 19px;
 }
 
 body {
-  max-width: 1920px;
   background: $background;
   margin: 0 auto;
 }
 
 .container {
-  max-width: 1140px;
+  padding: 0 150px;
   margin: 0 auto;
 }
 
 //HEADER
-.header-wrap {
+.header {
   display: flex;
-  justify-content: space-between;
-  align-items: start;
+  justify-content: left;
+  align-items: center;
   padding-top: 46px;
   position: relative;
-}
 
-.header {
-  &__navigation {
-    display: flex;
+  &__logo {
+    width: 140px;
+    height: 24px;
+
+    &-link {
+      display: inline-block;
+      height: 100%;
+    }
   }
   &__nav {
-    margin-left: 50px;
-    & ul {
+    padding: 0 50px;
+
+    &-list {
       display: flex;
       align-items: start;
 
-      & li {
-        margin-right: 30px;
+      &-item {
+        padding-right: 30px;
       }
-      & li:last-child {
-        margin-right: 0;
+      &-item:last-child {
+        padding-right: 0;
       }
-    }
-  }
-  &__logo {
-    display: flex;
-    flex-direction: column;
-
-    & small {
-      font-size: 10px;
-      font-family: "Montserrat", sans-serif;
-      color: $lightText;
-      text-transform: lowercase;
-      font-weight: 100;
-      padding-top: 10px;
     }
   }
 
   &__social {
     display: flex;
+    margin-right: 0;
+    margin-left: auto;
+    align-items: center;
 
     &-phone {
-      margin-right: 45px;
+      padding-right: 45px;
     }
-    &-links a {
+    &-link {
       padding-right: 30px;
     }
-    &-links a:last-child {
-      padding-right: 0;
+    &-link:last-child {
+      padding-right: 0px;
     }
+  }
+
+  &__txt {
+    display: inline-block;
+    text-align: left;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: $lightText;
+    font-weight: 300;
+    padding-top: 10px;
+    max-width: 140px;
+    line-height: 12px;
   }
 }
 
 .telegram::before {
-  content: url(/dist/assets/telegram.png);
+  content: url(/dist/assets/telegram.svg);
   width: 20px;
   height: 20px;
 }
 
 .viber::before {
-  content: url(/dist/assets/viber.png);
+  content: url(/dist/assets/viber.svg);
   width: 20px;
   height: 20px;
 }
 
 .whatsapp::before {
-  content: url(/dist/assets/whatsapp.png);
+  content: url(/dist/assets/whatsapp.svg);
   width: 20px;
   height: 20px;
 }
@@ -131,7 +139,7 @@ header::before {
   z-index: -1;
 }
 
-.header-wrap::before {
+.header::before {
   content: "";
   display: block;
   position: absolute;
@@ -145,7 +153,7 @@ header::before {
   z-index: -3;
 }
 
-.header-wrap::after {
+.header::after {
   content: "";
   display: block;
   position: absolute;
@@ -160,77 +168,70 @@ header::before {
 }
 
 //Main
-.mainScreen {
+.section-main {
+  padding-top: 90px;
+  padding-bottom: 70px;
+}
+
+.main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 
-  &-wrap {
-    height: calc(100vh - 200px);
+  &__first {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
+    justify-content: start;
 
-  &L {
-    width: 25%;
-    h1 {
+    &-header {
+      display: inline-block;
       font-weight: 400;
       font-size: 48px;
+      line-height: 58px;
+      width: 360px;
+      padding-bottom: 30px;
+
+      &-grad {
+        font-weight: 900;
+      }
     }
-    span {
-      font-weight: 900;
-    }
-    p {
+    &-txt {
       font-family: "Montserrat", sans-serif;
       font-size: 18px;
-      margin-top: 30px;
+      line-height: 22px;
+      font-weight: 400;
+      display: inline-block;
+      max-width: 275px;
     }
   }
 
-  &R {
+  &__second {
     position: relative;
-    width: 30%;
-    & > h3 {
-      text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: end;
+    align-items: end;
+
+    &-header {
       font-size: 18px;
+      line-height: 21px;
+      font-weight: 500;
+      max-width: 290px;
+      padding-bottom: 40px;
 
-      & .grad {
+      &-grad {
         text-transform: uppercase;
-      }
-    }
-    &__pref {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: 140px 140px;
-      grid-template-rows: 1fr 1fr;
-      gap: 30px 30px;
-      justify-content: end;
-
-      h3 {
-        font-size: 18px;
         letter-spacing: 0.05em;
-        font-weight: 500;
-        text-align: right;
-        text-transform: uppercase;
-      }
-      p {
-        font-size: 16px;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        text-align: end;
-        margin-top: 6px;
-      }
-      &-btn {
-        text-align: end;
+        font-weight: 700;
       }
     }
 
-    .btn {
+    &-btn {
       @include button;
       margin-top: 60px;
     }
-    .btn:hover {
+    &-btn:hover {
       box-shadow: 1px 1px 10px rgba(168, 252, 255, 0.3);
     }
   }
@@ -242,7 +243,44 @@ header::before {
   }
 }
 
-.mainScreen::before {
+.pref {
+  display: flex;
+  justify-content: end;
+
+  &-wp {
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+  &-wp:last-child {
+    margin-right: 0;
+  }
+
+  &__block {
+    margin-bottom: 30px;
+
+    &-head {
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding-bottom: 6px;
+      line-height: 21px;
+    }
+
+    &-txt {
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+    }
+  }
+  &-block:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.main::before {
   content: "";
   background-color: $circleTxt;
   opacity: 0.5;
@@ -255,7 +293,7 @@ header::before {
   left: -120px;
   top: 400px;
 }
-.mainScreenR::after {
+.main__second::after {
   content: "";
   display: block;
   position: absolute;
@@ -264,15 +302,15 @@ header::before {
   background-size: cover;
   background-image: url(/dist/assets/red_ball.png);
   background-size: cover;
-  left: -80px;
-  top: 310px;
+  left: -1px;
+  top: 340px;
   filter: blur(2.5px);
 }
 
 //FOOTER
-.mainFooter {
+.footer-top {
+  padding-top: 55px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
 
   &-head {
@@ -282,61 +320,64 @@ header::before {
     text-align: left;
     color: $darkText;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
+  &__list {
+    &-item {
+      margin-bottom: 10px;
 
-  & ul li {
-    margin-bottom: 10px;
-  }
-  & ul li:last-child {
-    margin-bottom: 0;
-  }
-  & ul li a {
-    font-weight: 400;
-  }
-
-  .flex {
-    display: flex;
-  }
-  &__menu {
-    &-1 {
-      margin-right: 50px;
+      & > a {
+        font-weight: 400;
+      }
+    }
+    &-item:last-child {
+      margin-bottom: 0px;
     }
   }
 
-  &__contacts {
-    .right {
-      text-align: right;
-    }
+  &__center {
+    padding: 0 100px;
 
-    .number {
-      display: block;
-      text-align: right;
+    &-nav {
+      display: flex;
     }
+    &-menu {
+      padding-right: 50px;
+    }
+    &-menu:last-child {
+      padding-right: 0px;
+    }
+  }
+
+  &__end {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
 
     &-contacts {
       margin: 20px 0;
-      & a {
-        margin-right: 10px;
-      }
-      & a:last-child {
-        margin-right: 0px;
-      }
+    }
+
+    &-contact {
+      margin-right: 10px;
+    }
+    &-contact:last-child {
+      margin-right: 0px;
     }
   }
 }
 
-.smallFooter {
+.footer-bottom {
   text-align: right;
-  margin-top: 30px;
-  a,
-  p {
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  &-txt {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 400;
-    text-align: right;
   }
-  a {
+  &-link {
     text-decoration: underline;
     margin-top: 5px;
   }
